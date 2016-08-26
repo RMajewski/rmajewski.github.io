@@ -30,3 +30,15 @@ defaults:
       type: "posts"
     values:
       layout: post
+
+navigation:
+  - text: Start
+    url: /
+  - text: Projekte
+    url: /projects/
+  - text: Blog
+    url: /blog/
+    layout: post
+  - text: Über mich
+    url: /about/
+    

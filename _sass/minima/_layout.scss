@@ -3,11 +3,15 @@
  */
 .site-header {
     border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    //border-bottom: 1px solid $grey-color-light;
+    //min-height: 56px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+    .wrapper {
+      border-bottom: 1px solid $grey-color-light;
+    }
 }
 
 .site-title {
@@ -17,29 +21,49 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
 }
 
 .site-nav {
     float: left;
-    line-height: 56px;
+    //line-height: 56px;
 
-    .menu-icon {
-        display: none;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      float: left;
+      display: block;
+      margin: 5px 5px 1px 5px;
     }
 
     .page-link {
         color: $text-color;
-        line-height: $base-line-height;
+        line-height: 0;
+        border: 1px solid $grey-color-dark;
+        border-radius: 5px;
+        padding: 5px 5px 0 5px;
+        text-align: center;
 
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
+        .trigger {
+          clear: both;
+          display: none;
         }
+
+        &:hover {
+          background-color: $grey-color-light;
+          text-decoration: none;
+        }
+    }
+
+    .current {
+      background-color: $grey-color-light;
+
+      &:hover {
+        background-color: #fff;
+      }
     }
 
     @include media-query($on-palm) {
@@ -51,25 +75,6 @@
         border-radius: 5px;
         text-align: right;
 
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
         .trigger {
             clear: both;
             display: none;
@@ -77,6 +82,7 @@
 
         &:hover .trigger {
             display: block;
+            margin: 5px 5px 0 5px;
             padding-bottom: 5px;
         }
 
@@ -98,8 +104,12 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    //border-top: 1px solid $grey-color-light;
+    padding: 0;
+
+    .wrapper {
+      border-top: 1px solid $grey-color-light;
+    }
 }
 
 .footer-heading {
@@ -111,6 +121,13 @@
 .social-media-list {
     list-style: none;
     margin-left: 0;
+    margin-top: 0;
+}
+
+.social-media-list li {
+  display: block;
+  float: left;
+  margin: 0px 5px;
 }
 
 .footer-col-wrapper {
