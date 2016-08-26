@@ -22,6 +22,7 @@ url: "https://rmajewski.github.com" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 timezone: Europe/Berlin
+show_drafts: true
 
 defaults:
   -
@@ -30,6 +31,8 @@ defaults:
       type: "posts"
     values:
       layout: post
+      author: "René Majewski"
+      permalink: /blog/:year/:month/:day/:title.html
 
 navigation:
   - text: Start

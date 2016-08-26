@@ -6,6 +6,7 @@
           {% for link in site.navigation %}
             <li><a class="page-link {% if link.url == page.url %}current{% endif %}" href="{{ link.url }}">{{ link.text }}</a></li>
           {% endfor %}
+          <li class="rss"><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="page-link">RSS-Feed</a></li>
         </ul>
       </div>
     </nav>

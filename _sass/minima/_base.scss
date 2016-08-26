@@ -131,7 +131,7 @@ pre,
 code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: #eef;
 }
 
@@ -142,11 +142,11 @@ code {
 pre {
     padding: 8px 12px;
     overflow-x: auto;
+    border-radius: 15px;
 
     > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
+      padding-right: 0;
+      padding-left: 0;
     }
 }
 
